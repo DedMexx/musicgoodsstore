@@ -1,0 +1,6 @@
+.listName {
+    width: calc(var(--uum) * 12);
+}
+.listDescription {
+    width: calc(var(--uum) * 22.7);
+}

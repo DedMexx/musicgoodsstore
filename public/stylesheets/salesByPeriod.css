@@ -1,0 +1,20 @@
+.list {
+    width: calc(var(--uum) * 54.9);
+}
+
+.list div.listTotal {
+    width: calc(var(--uum) * 13.09);
+    border-left: none;
+}
+
+.listTotalCost, .listTotalPaid {
+    width: calc(var(--uum) * 8.5);
+}
+
+.listCount {
+    width: calc(var(--uum) * 7);
+}
+
+.listClient, .listCountOfOrders {
+    width: calc(var(--uum) * 17.44);
+}

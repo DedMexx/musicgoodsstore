@@ -1,0 +1,103 @@
+.list {
+    width: calc(var(--uum) * 67);
+}
+
+.listImage {
+    width: calc(var(--uum) * 12);
+    padding: calc(var(--uum) * 1);
+}
+
+.listImageTag {
+    width: calc(var(--uum) * 6.9);
+}
+
+.quantity {
+    width: calc(var(--uum) * 6.9);
+}
+
+.outOfStock {
+    background: linear-gradient(45deg,
+    transparent 49.9%,
+    var(--main-grey) 49.9%,
+    var(--main-grey) 60%,
+    transparent 60%),
+    linear-gradient(45deg,
+        var(--main-grey) 10%,
+        transparent 10%);
+    background-size: 0.5em 0.5em;
+}
+
+.listImage {
+    border-left: none !important;
+    border-right: calc(var(--uum) * .1) solid var(--main-dark-grey) !important;
+}
+
+.listCategories {
+    width: calc(var(--uum) * 9);
+}
+
+.listSellingPrice {
+    width: calc(var(--uum) * 7);
+}
+
+.listManufacturer {
+    width: calc(var(--uum) * 8.8);
+}
+
+.showItem {
+    width: calc(var(--uum) * 70);
+}
+
+div.showImage, img.showImage {
+    width: calc(var(--uum) * 17);
+    text-align: center;
+}
+
+div.showImage {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+div.mainInfo {
+    width: calc(var(--uum) * 30);
+}
+
+div.showDescription {
+    width: calc(var(--uum) * 22.8);
+}
+
+.showWrapper h3 {
+    font-size: calc(var(--uum) * 1);
+    margin: calc(var(--uum) * 1) calc(var(--uum) * .3);
+}
+
+div.showDescription {
+    border: none;
+}
+
+.descriptionText {
+    text-align: justify;
+}
+
+div.showCategories {
+    border: none;
+    text-align: justify;
+}
+
+.change {
+    width: calc(var(--uum) * 70);
+}
+
+.showWrapper input[type='submit'] {
+    width: calc(var(--uum) * 33);
+}
+
+.categoryInput {
+    width: 100%;
+}
+
+.showItem > div.noDescription {
+    width: calc(var(--uum) * 47);
+    border-right: none;
+}

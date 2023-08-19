@@ -1,0 +1,18 @@
+.error {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.error404img {
+    width: calc(var(--uum) * 25);
+    filter: invert(7%) saturate(230%) brightness(66%);
+    margin-top: calc(var(--uum) * 3.5);
+}
+
+.errorText {
+    text-align: center;
+    font-weight: bold;
+    font-size: calc(var(--uum) * 1.6);
+    margin-top: calc(var(--uum) * 2);
+}

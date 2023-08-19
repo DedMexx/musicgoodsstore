@@ -1,0 +1,143 @@
+.list {
+    width: calc(var(--uum) * 53.5);
+}
+
+.list div.listShowOrder {
+    width: calc(var(--uum) * 6);
+    border-left: none;
+}
+
+.listDate {
+    width: calc(var(--uum) * 7);
+}
+
+.listPaid, .listCost {
+    width: calc(var(--uum) * 8.51);
+}
+
+.listClient {
+    width: calc(var(--uum) * 17.1);
+    display: flex;
+    flex-direction: column;
+}
+
+.showItem {
+    width: calc(var(--uum) * 70);
+}
+
+.showItem > div.showOrderDetail {
+    width: calc(var(--uum) * 44);
+}
+
+.showItem .showOrderDetail ~ div {
+    width: calc(var(--uum) * 20);
+}
+
+.detailsItem, .orderPayment {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.detailsItem > div, .orderPayment > div {
+    width: 23.2%;
+    padding: calc(var(--uum) * 0.3);
+    border: solid var(--main-grey) calc(var(--uum) * .1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.detailsItem:first-child > div, .orderPayment:first-child > div {
+    border-top: solid var(--main-grey) calc(var(--uum) * .2);
+}
+
+.detailsItem > div:first-child, .orderPayment > div:first-child {
+    border-left: solid var(--main-grey) calc(var(--uum) * .2);
+}
+
+.detailsItem > div:last-child, .orderPayment > div:last-child {
+    border-right: solid var(--main-grey) calc(var(--uum) * .2);
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.detailsItem:last-child > div, .orderPayment:last-child > div {
+    border-bottom: solid var(--main-grey) calc(var(--uum) * .2);
+}
+
+.detailsItem .fullCost {
+    width: 73.2%;
+}
+
+.orderPayment > div {
+    width: 50%;
+}
+
+.showOrderDetail + div {
+    border-right: none;
+}
+
+.showPayments .addPayment {
+    width: 100%;
+    margin-top: calc(var(--uum) * 1);
+}
+
+form.insertForm {
+    width: calc(var(--uum) * 60);
+}
+
+.insertForm .dynamicInput {
+    width: calc(var(--uum) * 12);
+}
+
+input[disabled] {
+    background-color: var(--white-grey);
+}
+
+.inputBlock:nth-child(4) input,
+.inputBlock:nth-child(5) input {
+    width: calc(var(--uum) * 46);
+}
+
+.insertForm .email li {
+    width: calc(var(--uum) * 47);
+}
+
+.insertForm .change {
+    width: calc(var(--uum) * 70);
+}
+
+.insertForm .change input {
+    width: calc(var(--uum) * 34);
+}
+
+.productBlock ul {
+    margin-left: 0;
+}
+
+.productBlock li {
+    width: calc(var(--uum) * 13);
+}
+
+.productBlock > div > label {
+    margin: auto;
+    text-align: center;
+    display: block;
+}
+
+h2 + div .autocomplete {
+    margin-top: calc(var(--uum) * 1.5);
+}
+
+.productBlock > div {
+    text-align: center;
+}
+
+.plusWrapper + div {
+    display: flex;
+    justify-content: space-evenly;
+    margin: calc(var(--uum) * 2);
+}

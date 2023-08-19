@@ -1,0 +1,68 @@
+.list {
+    width: calc(var(--uum) * 50.13);
+}
+
+.list * {
+    border: none !important;
+}
+
+.list > .listHeader > div, .list > .item div {
+    border: calc(var(--uum) * .1) solid var(--main-dark-grey) !important;
+    border-bottom: none !important;
+    border-right: none !important;
+}
+
+.list > .listHeader > div {
+    border-top: none !important;
+}
+
+.list > .item > div.itemComposition, .list > .item div.listCompositionItem {
+    border: none !important;
+    padding: 0;
+    align-items: stretch;
+}
+
+.list > div > div:first-child {
+    border-left: none !important;
+}
+
+.itemComposition {
+    display: flex;
+    flex-direction: column;
+}
+
+.listDate, .listCount {
+    width: calc(var(--uum) * 6.7);
+}
+
+.listName {
+    width: calc(var(--uum) * 9);
+}
+
+.listProfit, .listTotalProfit {
+    width: calc(var(--uum) * 12);
+}
+
+.item {
+    border-top: calc(var(--uum) * .3) solid var(--main-dark-grey) !important;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.list > .listHeader > div.listTotalProfit, .list > .item div.listTotalProfit  {
+    border-left: calc(var(--uum) * .4) solid var(--main-dark-grey) !important;
+}
+
+.listTotal + .listTotalProfit, .listTotal {
+    width: calc(var(--uum) * 12);
+    padding-top: calc(var(--uum) * 1);
+    padding-bottom: calc(var(--uum) * 1);
+}
+
+.listTotal {
+    width: calc(var(--uum) * 37.45);
+}
+
+

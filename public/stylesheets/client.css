@@ -1,0 +1,17 @@
+.listCheckOrders {
+    width: calc(var(--uum) * 8);
+    border-left: none !important;
+}
+
+.listFIO {
+    width: calc(var(--uum) * 8.1);
+}
+.listEmail {
+    width: calc(var(--uum) * 14.9);
+}
+
+.listPhone {
+    width: calc(var(--uum) * 8.9);
+}
+
+

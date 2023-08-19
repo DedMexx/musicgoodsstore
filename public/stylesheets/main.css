@@ -1,0 +1,354 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    font-family: Arial, Helvetica, sans-serif;
+    transition: .1s;
+}
+
+:root {
+    /* Универсальная единица */
+    --uum: calc(calc(1vh + 1vw) * .85);
+
+    /* Цвета */
+    --main-grey: rgba(49, 15, 15, 0.16);
+    --main-dark-grey: rgba(49, 15, 15, 0.3);
+    --main-red: rgb(181, 14, 24);
+    --main-red-high-opacity: rgba(181, 14, 24, .85);
+    --main-red-middle-opacity: rgba(181, 14, 24, .6);
+    --white: rgb(255, 255, 255);
+    --white-grey: rgb(220, 220, 220);
+    --light-grey: rgba(149, 94, 94, 0.6);
+    --black: rgba(0, 0, 0, 1);
+    --black-middle-opacity: rgba(0, 0, 0, .5);
+    --most-light-grey: rgba(236, 236, 236, 1);
+    --light-blue: rgba(45, 80, 203, 0.6);
+    --grey-high-opacity: rgba(128, 128, 128, 0.95);
+    --green: rgba(0, 128, 0, 1);
+}
+
+/* Общие стили */
+
+body {
+    background: var(--white-grey);
+}
+
+header {
+    height: calc(var(--uum) * 5);
+    box-shadow: 0 0 20px 0 var(--black-middle-opacity);
+    background: var(--white);
+    width: 100%;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    z-index: 10;
+}
+
+
+.green {
+    color: var(--green);
+}
+
+.mainRed {
+    color: var(--main-red);
+}
+
+.header-wrapper {
+    margin-left: calc(var(--uum) * 1);
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+.logo {
+    height: calc(var(--uum) * 5);
+    margin-right: calc(var(--uum) * .7);
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+nav a {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--black);
+    font-size: calc(var(--uum) * .95);
+    padding: 0 calc(var(--uum) * .7);
+    height: calc(var(--uum) * 5);
+    width: calc(var(--uum) * 5);
+}
+
+nav a:hover:not(.selectedMenu) {
+    background: var(--main-red-high-opacity);
+    color: white;
+    box-shadow: inset 0 0 4px 0 var(--black-middle-opacity);
+}
+
+nav > a, nav > div {
+    border-left: solid calc(var(--uum) * .08) var(--white-grey);
+}
+
+
+/* Блок для dropdown */
+
+.dropdown-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.arrow {
+    position: absolute;
+    width: calc(var(--uum) * 1);
+    margin-left: calc(var(--uum) * -6);
+}
+
+.reports .arrow {
+    margin-left: calc(var(--uum) * -4);
+}
+
+.references:hover .arrow, .reports:hover .arrow, .forSelling:hover .arrow {
+    filter: invert(100%);
+}
+
+.selectedMenu .arrow {
+    margin-left: calc(var(--uum) * -6.6);
+    filter: invert(100%);
+}
+
+.dropdown-wrapper:hover > a > img.arrow {
+    transform: rotate(180deg);
+}
+
+.references, .reports, .dropdown-content > a {
+    width: calc(var(--uum) * 8);
+}
+
+.references span, .reports span {
+    margin-left: calc(var(--uum) * 1.3);
+}
+
+.dropdown-content {
+    display: none;
+    margin-top: calc(var(--uum) * 5);
+    position: absolute;
+    background-color: var(--white);
+    box-shadow: inset 0 0 calc(var(--uum) * .6) calc(var(--uum) * .1) var(--white-grey),
+    0 calc(var(--uum) * .2) calc(var(--uum) * .6) calc(var(--uum) * -.3) var(--black-middle-opacity);
+}
+
+.dropdown-content > a {
+    border-top: solid calc(var(--uum) * .1) var(--white-grey);
+    z-index: 1;
+}
+.dropdown-wrapper:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-wrapper:last-child {
+    border-right: solid calc(var(--uum) * .08) var(--white-grey);
+}
+
+/* Dropdown для отчета "О продажах" */
+
+.forSelling {
+    width: calc(var(--uum) * 8);
+}
+
+.forSelling + div {
+    margin-left: calc(var(--uum) * 18.8);
+    margin-top: calc(var(--uum) * 0);
+}
+
+.forSelling + div a:first-child {
+    border: none;
+}
+
+.forSelling img.arrow {
+    margin-left: calc(var(--uum) * 7);
+    transform: rotate(-90deg);
+}
+
+.forSelling img.arrow {
+    margin-left: calc(var(--uum) * 7);
+    transform: rotate(-90deg);
+}
+
+.dropdown-wrapper:hover > a.forSelling > img.arrow {
+    transform: rotate(90deg);
+}
+
+.dropdown-wrapper > a.forSelling + div.dropdown-content {
+    display: none;
+}
+
+.dropdown-wrapper:hover > a.forSelling + div.dropdown-content {
+    display: block;
+}
+
+/* Конец Dropdown */
+
+.selectedMenu {
+    z-index: 1000;
+    color: white;
+    font-weight: bold;
+    text-decoration: underline;
+    background: var(--main-red-high-opacity);
+    box-shadow: 0 0 3px 4px var(--main-red-middle-opacity), 0 0 6px 1px var(--black-middle-opacity);
+    border: none !important;
+}
+
+.selectedMenu + a {
+    border: none;
+}
+
+.dropdown-content-references a.selectedMenu {
+    border: none;
+}
+
+main {
+    margin-top: calc(var(--uum) * 7.5);
+    min-height: calc(var(--uum) * 24);
+}
+
+h1 {
+    font-size: calc(var(--uum) * 2.3);
+    text-align: center;
+}
+
+button, input[type='button'], input[type='submit'], .addNew, .swal2-confirm, input::-webkit-file-upload-button {
+    background: var(--main-red);
+    box-shadow: 0 13px 15px -15px var(--black);
+    height: auto;
+    cursor: pointer;
+    color: var(--white);
+}
+
+input[type='file'] {
+    background: var(--white);
+}
+
+input::-webkit-file-upload-button {
+    margin-right: calc(var(--uum) * 1);
+    padding: calc(var(--uum) * .7);
+}
+
+.swal2-confirm {
+    width: calc(var(--uum) * 4);
+    height: calc(var(--uum) * 2);
+}
+
+input, textarea {
+    box-shadow: inset 0 6px 6px -6px var(--black);
+}
+
+input, textarea, .addNew, button, input::-webkit-file-upload-button {
+    border: none;
+    border-radius: 20px;
+    resize: none;
+    font-size: calc(var(--uum) * 1);
+    text-align: center;
+    font-weight: bold;
+}
+
+.selected {
+    background: var(--main-red-middle-opacity);
+}
+
+nav[role='navigation'] {
+    display: flex;
+    justify-content: center;
+    margin: calc(var(--uum) * 1.3) auto auto;
+}
+
+.flex-1 {
+    display: none;
+}
+
+.leading-5 {
+    display: none;
+}
+
+.z-0 {
+    display: flex;
+    background: var(--white);
+    border-radius: 20px;
+    justify-content: center;
+    overflow: hidden;
+    border: calc(var(--uum) * .1) solid var(--main-dark-grey);
+}
+
+.z-0 * {
+    font-size: calc(var(--uum) * 1);
+    width: calc(var(--uum) * 2);
+    height: calc(var(--uum) * 2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+
+[aria-current='page'], [aria-disabled='true'] {
+    background: var(--most-light-grey);
+    cursor: not-allowed;
+}
+
+.z-0 > span, .z-0 a {
+    border-right: calc(var(--uum) * .1) solid var(--main-dark-grey);
+}
+
+.z-0 a:last-child, .z-0 span:last-child {
+    border: none;
+}
+
+.hiddenInfoIcon {
+    display: inline;
+    background: url("../images/technical/info.png") no-repeat;
+    background-size: calc(var(--uum) * .5);
+    width: calc(var(--uum) * .5);
+    height: calc(var(--uum) * .5);
+    position: absolute;
+    z-index: 1;
+    cursor: help;
+}
+
+.hiddenInfoText {
+    position: absolute;
+    display: none;
+    width: calc(var(--uum) * 13);
+    font-size: calc(var(--uum) * .6);
+    margin-left: calc(var(--uum) * .5);
+    background: var(--grey-high-opacity);
+    color: var(--white);
+    padding: calc(var(--uum) * .5);
+    border-radius: 10px;
+    z-index: 1000000;
+}
+
+.hiddenInfoIcon:hover + .hiddenInfoText {
+    display: block;
+}
+
+footer {
+    margin-top: calc(var(--uum) * 2.5);
+    background: var(--black-middle-opacity);
+    height: calc(var(--uum) * 6);
+    box-shadow: 0 0 20px 0 var(--black-middle-opacity);
+}
+
+.footer-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    color: var(--white);
+}

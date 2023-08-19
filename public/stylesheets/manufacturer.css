@@ -1,0 +1,30 @@
+.list {
+    width: calc(var(--uum) * 66.3);
+}
+
+.list div.listCheckProducts {
+    width: calc(var(--uum) * 7);
+    border-left: none;
+    border-right: calc(var(--uum) * .1) solid var(--main-dark-grey);
+}
+
+.listName {
+    width: calc(var(--uum) * 5);
+}
+
+.listDescription {
+    width: calc(var(--uum) * 15);
+}
+
+.listAddress, .post_index {
+    padding: calc(var(--uum) * .3);
+    text-align: center;
+}
+
+.listAddress {
+    width: calc(var(--uum) * 14.9);
+}
+
+.listPostIndex {
+    width: calc(var(--uum) * 5.8);
+}

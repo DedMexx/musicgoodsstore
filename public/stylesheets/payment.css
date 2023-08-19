@@ -1,0 +1,22 @@
+.search-wrapper {
+    margin-top: calc(var(--uum) * 1);
+}
+
+.list div.listShowOrder {
+    width: calc(var(--uum) * 6);
+    border-left: none;
+}
+
+.listDate {
+    width: calc(var(--uum) * 7);
+}
+
+.listAmount {
+    width: calc(var(--uum) * 10.1);
+}
+
+.listClient {
+    display: flex;
+    flex-direction: column;
+    width: calc(var(--uum) * 17);
+}

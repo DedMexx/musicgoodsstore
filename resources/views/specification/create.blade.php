@@ -1,0 +1,5 @@
+@extends('specification.from')
+@section('actionRoute', route('specification.store'))
+@section('name', old('name'))
+@section('description', old('description'))
+@section('buttonText', 'Добавить')

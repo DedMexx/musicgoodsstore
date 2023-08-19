@@ -1,0 +1,5 @@
+@extends('category.from')
+@section('actionRoute', route('category.store'))
+@section('name', old('name'))
+@section('description', old('description'))
+@section('buttonText', 'Добавить')

@@ -1,0 +1,35 @@
+.list {
+    width: calc(var(--uum) * 60);
+}
+
+.list * {
+    text-align: center;
+}
+
+.listName {
+    width: calc(var(--uum) * 9);
+}
+
+.listEmail {
+    width: calc(var(--uum) * 14.9);
+}
+
+.listFIO {
+    width: calc(var(--uum) * 11) !important;
+}
+
+.listPhone {
+    width: calc(var(--uum) * 9.9) !important;
+}
+
+form.insertForm {
+    width: calc(var(--uum) * 41);
+}
+
+.insertForm label {
+    width: calc(var(--uum) * 15);
+}
+
+.autocomplete {
+    margin-left: calc(var(--uum) * 17);
+}

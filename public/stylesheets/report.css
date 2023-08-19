@@ -1,0 +1,11 @@
+.search-wrapper {
+    margin-top: calc(var(--uum) * 1);
+}
+
+.list {
+    width: calc(var(--uum) * 40);
+}
+
+.listName, .listCount, .listCountOfOrders, .listOrdersSum {
+    width: calc(var(--uum) * 10);
+}

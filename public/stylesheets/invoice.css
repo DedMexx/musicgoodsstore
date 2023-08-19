@@ -1,0 +1,81 @@
+.item > div.listNumber, .listHeader > div.listNumber {
+    width: calc(var(--uum) * 6);
+    border-left: none;
+}
+
+.item {
+    border: solid var(--main-dark-grey) calc(var(--uum) * 0.2);
+    border-left: none;
+    border-right: none;
+}
+
+.listHeader {
+    border-top: solid var(--main-dark-grey) calc(var(--uum) * 0.35);
+}
+
+.listHeader + .item {
+    border-top: solid var(--main-dark-grey) calc(var(--uum) * 0.35);
+}
+
+.item:last-child {
+    border-bottom: solid var(--main-dark-grey) calc(var(--uum) * 0.35);
+}
+
+.listDate {
+    width: calc(var(--uum) * 6);
+}
+
+.listSupplier {
+    width: calc(var(--uum) * 12);
+}
+
+.listProducts, .listQuantity {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    align-items: stretch;
+}
+
+.listProducts {
+    width: calc(var(--uum) * 10.1);
+}
+
+.listQuantity {
+    width: calc(var(--uum) * 6);
+}
+
+.listProductItemName {
+    width: 100%;
+    border-bottom: solid var(--main-dark-grey) calc(var(--uum) * 0.1);
+    margin: 0;
+}
+
+.listProductItemName:last-child {
+    border: none;
+}
+
+.listProductItemQuantity {
+    width: 100%;
+    border-bottom: solid var(--main-dark-grey) calc(var(--uum) * 0.1);
+    margin: 0;
+}
+
+.listProductItemQuantity:last-child {
+    border: none;
+}
+
+.productBlock ul {
+    margin-left: 0;
+}
+
+.productBlock ul li {
+    width: calc(var(--uum) * 26);
+}
+
+.dynamicInputLabelInput {
+    width: calc(var(--uum) * 24);
+}
+
+.dynamicInput {
+    width: calc(var(--uum) * 6);
+}

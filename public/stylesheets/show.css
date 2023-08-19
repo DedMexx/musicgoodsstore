@@ -1,0 +1,78 @@
+h1 {
+    margin-bottom: calc(var(--uum) * .6);
+}
+
+.showItem {
+    background: var(--white);
+    width: calc(var(--uum) * 60);
+    margin: auto;
+    border: var(--main-dark-grey) solid calc(var(--uum) * .1);
+    box-shadow: 0 13px 15px -15px var(--black);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    font-size: calc(var(--uum) * .9);
+}
+
+.showItem > div {
+    padding: calc(var(--uum) * 1.5);
+    width: calc(var(--uum) * 27);
+    border-right: var(--main-dark-grey) solid calc(var(--uum) * .1);
+}
+
+div.showAddress {
+    border: none;
+}
+
+h2 {
+    text-align: center;
+    font-size: calc(var(--uum) * 1.3);
+    margin-bottom: calc(var(--uum) * 1.5);
+}
+
+.mainInfo > div, .addressInfo > div {
+    border-bottom: calc(var(--uum) * .1) dotted black;
+    margin-bottom: calc(var(--uum) * .7);
+}
+
+.mainInfo span, .addressInfo > div > span {
+    border-bottom: white solid calc(var(--uum) * .2);
+}
+
+span ~ span {
+    float: right;
+}
+
+.showItem a {
+    color: var(--main-red);
+    text-decoration: underline dotted;
+}
+
+.showItem a:hover {
+    text-decoration: none;
+}
+
+.change {
+    display: flex;
+    flex-direction: row;
+    width: calc(var(--uum) * 60);
+    margin: calc(var(--uum) * 1.5) auto auto;
+    justify-content: space-around;
+}
+
+input[type='submit'] {
+    width: calc(var(--uum) * 28);
+    height: calc(var(--uum) * 2.5);
+}
+
+.swal2-confirm {
+    background: var(--light-blue);
+    width: calc(var(--uum) * 8);
+    margin-right: calc(var(--uum) * .5);
+}
+
+.swal2-cancel {
+    height: calc(var(--uum) * 2);
+    width: calc(var(--uum) * 6);
+    margin-left: calc(var(--uum) * .5);
+}
